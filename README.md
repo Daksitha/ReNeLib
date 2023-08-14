@@ -2,6 +2,9 @@
 
 This paper will be presented at ICMI'23.
 
+
+![Teaser](docs/teaser.png)
+
 <div class="row">
 <div class="col-sm-3"><a href="https://doi.org/10.1145/3577190.3614133" class="btn">The Paper</a></div>
 <div class="col-sm-3"><a href="https://github.com/Daksitha/ReNeLib" target="_blank" class="btn">Code</a></div>
