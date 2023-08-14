@@ -1,0 +1,17 @@
+[project]
+video_dir = "/workspace/data"
+sessions_dir = "/workspace/data/"
+base_dir = "/workspace/code/"
+random_seed = 1234
+dataset = "/home/daksitha/Documents/AVASAG/LLB_feature_extractor/data/videos"
+verbos = 0
+
+[speaker_diarisation]
+#speech intervals in seconds
+back_channel = [0,2]
+short_speech = [2,3]
+long_speech = [3,5000]
+#second apart speech segments will be merge to get a union
+speech_collar = 2
+
+

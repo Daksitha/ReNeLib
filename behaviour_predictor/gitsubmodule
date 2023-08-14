@@ -1,0 +1,3 @@
+[submodule "external_lib/learning2listen"]
+	path = external_lib/learning2listen
+	url = https://github.com/evonneng/learning2listen.git

@@ -1,0 +1,40 @@
+name: behaviour
+channels:
+  - huggingface
+  - pytorch
+  - fastai
+  - nvidia
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - libiconv=1.17
+  - ffmpeg=4.4.1
+  - ffmpeg-python=0.2.0
+  - matplotlib-base>=3.2.2
+  - pip>=21.2.4
+  - python=3.8
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pywavelets
+  - pyyaml
+  - resampy
+  - scikit-image
+  - scikit-learn
+  - scikit-video
+  - seaborn
+  - tqdm
+  - wheel
+  - yaml5
+  - yarl
+  - requests
+  - transformers
+  - kornia
+  - pyrender
+  - pip 
+    - einops
+    - scipy
+    - six
+    - opencv_contrib_python
+    - pyzmq

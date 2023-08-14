@@ -1,0 +1,40 @@
+{
+  "l2l_base_dir": "external_lib/learning2listen/src/",
+  "l_vqconfig": "vqgan/configs/l2_32_smoothSS.json",
+  "pipeline": "er2er",
+  "model_path": "models/",
+  "pipeline": "er2er",
+  "tag": "delta_v6_",
+  "autoregressive": true,
+  "listener_flame_streamer": {
+    "ip": "127.0.0.1",
+    "port": "5567",
+    "topic": "flistner",
+    "stream_data": "data/conan/test",
+    "file_name": "p0_list_faces_clean_deca",
+    "bind": false
+  },
+  "speaker_flame_streamer": {
+    "ip": "127.0.0.1",
+    "port": "5556",
+    "topic": "flame",
+    "stream_data": "data/conan/test",
+    "file_name": "p1_speak_faces_clean_deca",
+    "bind": false
+  },
+  "speaker_audio_mfcc_streamer": {
+    "ip": "127.0.0.1",
+    "port": "5555",
+    "topic": "mfcc",
+    "stream_data": "data/conan/test",
+    "file_name": "p1_speak_audio_clean_deca",
+    "bind": false
+  },
+  "pub_output_to_fastapi": {
+    "ip": "127.0.0.1",
+    "port": "6680",
+    "topic": "",
+    "bind": true
+  }
+
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SIA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            margin-bottom: 2rem;
+        }
+
+        #webglcontainer {
+            position: relative;
+            width: 50vw;
+            height: 65vh;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .button-container button {
+            font-size: 1.25rem;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            background-color: rgba(206, 199, 199, 0.5);
+            transition: background-color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+    <script src="https://vuppetmaster.de/vmapi/v4/api?key=33Z98-39UXN-K1H25-3SWTD"></script>
+    <script>
+        window.onload = () => {
+            vm = new VM.Vuppetmaster();
+            vm.on('project.loaded', () => {
+                vm.core.setIdleMode(false);
+                vm.models.getFirst().createCtrlNode('l_upperarm').setEuler(0, 0, -1.3);
+                vm.models.getFirst().createCtrlNode('r_upperarm').setEuler(0, 0, 1.3);
+                vm.models.getFirst().createCtrlNode('l_forearm').setEuler(0, 0, -0.2);
+                vm.models.getFirst().createCtrlNode('r_forearm').setEuler(0, 0, 0.2);
+            });
+            vm.start();
+        };
+    </script>
+</head>
+
+<body>
+<h1>Socially Interactive Agent</h1>
+<div id="webglcontainer"></div>
+<div class="button-container">
+    <button class="btn btn-primary" onclick="connect()"><i class="fas fa-link"></i> Connect</button>
+    <button class="btn btn-danger" onclick="disconnect()"><i class="fas fa-unlink"></i> Disconnect</button>
+    <button class="btn btn-success" onclick="clientRequestAnimation()"><i class="fas fa-play"></i> Animate</button>
+</div>
+
+<script type="text/javascript" src="js/wsclient.js"></script>
+
+</body>
+
+</html>
