@@ -1,5 +1,4 @@
-<h1>ReNeLib</h1>
-<h3>Probabilistic Multi-modal Interlocutor-aware Generation of Facial Gestures in Dyadic Settings</h3>
+<h1>ReNeLiB: Real-time Neural Listening Behavior Generation for Socially Interactive Agents</h1>
 
 This paper will be presented at ICMI'23.
 
