@@ -1,5 +1,3 @@
-# 
-
 <h1>ReNeLib</h1>
 <h3>Probabilistic Multi-modal Interlocutor-aware Generation of Facial Gestures in Dyadic Settings</h3>
 
