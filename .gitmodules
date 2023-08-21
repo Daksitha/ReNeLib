@@ -1,4 +1,0 @@
-[submodule "FLAME _and_MFCC_extractors/external_libs/emoca"]
-	path = FLAME _and_MFCC_extractors/external_libs/emoca
-	url = https://github.com/radekd91/emoca.git
-	branch = origin/release/EMOCA_v2
