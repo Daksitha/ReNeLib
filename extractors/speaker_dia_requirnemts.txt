@@ -1,0 +1,6 @@
+#conda create -n pyannote python=3.8
+#conda activate pyannote
+#[Note: maker sure correct version] check on official pytorch website
+#conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
+#pip install https://github.com/pyannote/pyannote-audio/archive/develop.zip
+pip install toml

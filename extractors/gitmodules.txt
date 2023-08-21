@@ -1,0 +1,4 @@
+[submodule "external_libs/emoca"]
+	path = external_libs/emoca
+	url = https://github.com/radekd91/emoca.git
+	branch = origin/release/EMOCA_v2
