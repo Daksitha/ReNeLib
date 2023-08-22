@@ -52,6 +52,9 @@ conda install pytorch3d=0.7.0 -c pytorch3d
 #test installtion
 python
 from pytorch3d.structures import Meshes
+
+#install GDL
+pip install -e . 
 ```
 
 
