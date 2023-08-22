@@ -30,7 +30,31 @@ If this ran without any errors, you now have a functioning conda environment wit
 ### Long version
 working progress....
 ### Podman/Docker version
-working progress...
+
+don't use mamba instead use conda to create work38 environment 
+
+```
+docker run --rm -it pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
+
+apt-get install sox ffmpeg libcairo2 libcairo2-dev git zip wget
+conda create -n work38 python=3.8 
+conda activate work38
+# comment out all pytorch related libraries in conda-environment_py38_cu11_ubuntu.yml file
+
+conda env update -n work38 --file conda-environment_py38_cu11_ubuntu.yml
+pip install -r requirements38.txt
+pip install Cython==0.29
+
+conda install -c fvcore -c iopath -c conda-forge fvcore iopath
+conda install pytorch3d=0.7.0 -c pytorch3d
+ipython
+from pytorch3d.structures import Meshes
+```
+
+
+
+Once the container is setup. Install apt-get git, wget,zip
+
 ## Extract FLAME and MFCC from an audio and a video file: 
 - Place the video file inside data/videos/ directory
 - Place the audio file (if there are any; works without audio file as well) in data/audio directory
@@ -42,6 +66,10 @@ Similarly, you can follow MFCC extraction from audio files
 ```bash
 python feature_extraction_pipline.py -i ap -a ../data/audio/<audio name>.wav
 ```
+
+
+
+
 
 ## Create your own dataset (FLAME and MFCC)
 
