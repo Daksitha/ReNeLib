@@ -28,7 +28,7 @@ bash install.sh
 ```
 If this ran without any errors, you now have a functioning conda environment with all the necessary packages to [run the demos](#usage). If you had issues with the installation script, go through the [long version](#long-version) of the installation and see what went wrong. Certain packages (especially for CUDA, PyTorch and PyTorch3D) may cause issues for some users. If you prefer containerized version please follow [docker/podman](#podmandocker-version)
 ### Long version
-working progress....
+
 ### Podman/Docker version
 
 don't use mamba instead use conda to create work38 environment 
@@ -55,6 +55,19 @@ from pytorch3d.structures import Meshes
 
 #install GDL
 pip install -e . 
+```
+
+Some of the fixes I had to do before running the demo test on images 
+```
+pip install pandas
+# cv2 package gave some errors
+pip uninstall opencv-python
+pip uninstall opencv-contrib-python
+pip uninstall opencv-contrib-python-headless
+# re-install
+pip3 install opencv-contrib-python==4.5.5.62
+pip install opencv-python-headless==4.1.2.30
+pip install scikit-video
 ```
 
 
