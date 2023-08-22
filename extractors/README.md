@@ -40,14 +40,17 @@ apt-get install sox ffmpeg libcairo2 libcairo2-dev git zip wget
 conda create -n work38 python=3.8 
 conda activate work38
 # comment out all pytorch related libraries in conda-environment_py38_cu11_ubuntu.yml file
-
 conda env update -n work38 --file conda-environment_py38_cu11_ubuntu.yml
 pip install -r requirements38.txt
 pip install Cython==0.29
 
+# there are two ways to install pytorch3d
+pip install git+https://github.com/facebookresearch/pytorch3d.git@v0.6.2
+#or 
 conda install -c fvcore -c iopath -c conda-forge fvcore iopath
 conda install pytorch3d=0.7.0 -c pytorch3d
-ipython
+#test installtion
+python
 from pytorch3d.structures import Meshes
 ```
 
