@@ -25,10 +25,10 @@ Our software toolkit will be made fully publicly available and provide researche
 ## Installation
 Docker container
 docker run --rm -it pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
-> conda install -c fvcore -c iopath -c conda-forge fvcore iopath
-> conda install pytorch3d=0.7.0 -c pytorch3d
-> ipython
->> from pytorch3d.structures import Meshes
+- $conda install -c fvcore -c iopath -c conda-forge fvcore iopath
+- $conda install pytorch3d=0.7.0 -c pytorch3d
+- $ipython
+- $from pytorch3d.structures import Meshes
 
 ## Runtime setup
 To Do
