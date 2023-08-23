@@ -1,8 +1,5 @@
 <!-- # LLB -->
-<h1 align="center">Learning Listening Behaviour (LLB): A
-Framework for Interactive Social Agents
-Employing Multimodal
-Patient-Therapist Discourse Information</h1>
+<h1 align="center">Setting up EMOCA and MFCC Extractors</h1>
 
 
 ## Installation 
