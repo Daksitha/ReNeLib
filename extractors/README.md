@@ -44,8 +44,9 @@ pip install Cython==0.29
 # there are two ways to install pytorch3d
 pip install git+https://github.com/facebookresearch/pytorch3d.git@v0.6.2
 #or 
-conda install -c fvcore -c iopath -c conda-forge fvcore iopath
-conda install pytorch3d=0.7.0 -c pytorch3d
+conda install -c pytorch pytorch=1.7.0 torchvision cudatoolkit=11.0
+conda install -c conda-forge -c iopath fvcore iopath
+conda install -c pytorch3d pytorch3d
 #test installtion
 python
 from pytorch3d.structures import Meshes
