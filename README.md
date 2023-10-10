@@ -22,6 +22,12 @@ We comprehensively evaluate the real-time performance of the whole framework and
 In addition, we release new pre-trained behavioral generation models based on real-life psychotherapy interactions that can be used to generate domain-specific listening behaviors.
 Our software toolkit will be made fully publicly available and provide researchers with a valuable resource for deploying and evaluating novel listening behavior generation methods for SIAs in interactive real-time scenarios.
 
+Watch the demo video:
+
+<a href="https://youtu.be/I54lP-J0mtU" target="_blank">
+ <img src="https://img.youtube.com/vi/I54lP-J0mtU/default.jpg" alt="Watch the video" width="240" height="180" border="10" />
+</a>
+
 ## Installation
 Docker container
 docker run --rm -it pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
