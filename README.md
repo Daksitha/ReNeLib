@@ -1,6 +1,9 @@
 <h1>ReNeLiB: Real-time Neural Listening Behavior Generation for Socially Interactive Agents</h1>
 
-This paper will be presented at ICMI'23.
+## Demo video 
+<a href="https://youtu.be/I54lP-J0mtU" target="_blank">
+ <img src="https://img.youtube.com/vi/I54lP-J0mtU/default.jpg" alt="Watch the video" width="240" height="180" border="10" />
+</a>
 
 
 ![Teaser](docs/teaser.png)
@@ -21,12 +24,6 @@ In our work, we for the first time present such a toolkit consisting of three ma
 We comprehensively evaluate the real-time performance of the whole framework and its components.
 In addition, we release new pre-trained behavioral generation models based on real-life psychotherapy interactions that can be used to generate domain-specific listening behaviors.
 Our software toolkit will be made fully publicly available and provide researchers with a valuable resource for deploying and evaluating novel listening behavior generation methods for SIAs in interactive real-time scenarios.
-
-Watch the demo video:
-
-<a href="https://youtu.be/I54lP-J0mtU" target="_blank">
- <img src="https://img.youtube.com/vi/I54lP-J0mtU/default.jpg" alt="Watch the video" width="240" height="180" border="10" />
-</a>
 
 ## Installation
 Docker container
