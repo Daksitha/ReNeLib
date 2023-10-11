@@ -1,40 +1,116 @@
-<h1>ReNeLiB: Real-time Neural Listening Behavior Generation for Socially Interactive Agents</h1>
 
-## Demo video 
-<a href="https://youtu.be/I54lP-J0mtU" target="_blank">
- <img src="https://img.youtube.com/vi/I54lP-J0mtU/default.jpg" alt="Watch the video" width="240" height="180" border="10" />
-</a>
+# ReNeLiB: Real-time Neural Listening Behavior Generation for Socially Interactive Agents
 
+![Teaser Image](docs/teaser.png)
 
-![Teaser](docs/teaser.png)
+## Quick Links
 
-<div class="row">
-<div class="col-sm-3"><a href="https://doi.org/10.1145/3577190.3614133" class="btn">The Paper</a></div>
-<div class="col-sm-3"><a href="https://github.com/Daksitha/ReNeLib" target="_blank" class="btn">Code</a></div>
-<div class="col-sm-3"><a href="#data">Data</a></div>
-<div class="col-sm-3"><a href="#video-samples">Samples</a></div>
-</div>
-
+- [The Paper](https://doi.org/10.1145/3577190.3614133)
+- [Code on GitHub](https://github.com/Daksitha/ReNeLib)
+- [Data](#data)
+- [Demo Video](#demo-video)
 
 ## Abstract
-Flexible and natural nonverbal reactions to human behavior remain a challenge for socially interactive agents (SIAs) that are predominantly animated using hand-crafted rules. 
-While recently proposed machine learning-based approaches to conversational behavior generation are a promising way to address this challenge, they have not yet been employed in SIAs. 
-The primary reason for this is the lack of a software toolkit integrating such approaches with SIA frameworks that conforms to the challenging real-time requirements of human-agent interaction scenarios. 
-In our work, we for the first time present such a toolkit consisting of three main components: (1) real-time feature extraction capturing multi-modal social cues from the user; (2) behavior generation based on a recent state-of-the-art neural network approach; (3) visualization of the generated behavior supporting both FLAME-based and Apple ARKit-based interactive agents.
-We comprehensively evaluate the real-time performance of the whole framework and its components.
-In addition, we release new pre-trained behavioral generation models based on real-life psychotherapy interactions that can be used to generate domain-specific listening behaviors.
-Our software toolkit will be made fully publicly available and provide researchers with a valuable resource for deploying and evaluating novel listening behavior generation methods for SIAs in interactive real-time scenarios.
+
+Flexible and natural nonverbal reactions to human behavior remain a challenge for socially interactive agents (SIAs), especially those animated using predominantly hand-crafted rules. Our toolkit introduces a novel approach to enhancing the real-time, machine learning-based, conversational behavior generation capabilities of SIAs, considering the challenging real-time requirements of human-agent interaction scenarios. 
+
+- **Real-time Feature Extraction:** Captures multi-modal social cues from the user.
+- **Behavior Generation:** Utilizes a state-of-the-art neural network approach.
+- **Visualization:** Supports both FLAME-based and Apple ARKit-based interactive agents.
+
+We also provide new pre-trained behavioral generation models based on real-life psychotherapy interactions, enabling domain-specific listening behaviors generation. Our toolkit will be publicly available, serving as a valuable resource for researchers.
 
 ## Installation
-Docker container
+
+### Using Conda
+
+```bash
+conda env create python=3.8 --file environment.yml
+```
+Or alternatively:
+
+```bash
+conda env create python=3.8 --file conda_spec_file.txt
+```
+If any dependency installation fails, particularly `pytorch3d` and `torch`, install them after initiating the conda environment. Ensure to check your GPU's [CUDA compatibility](https://docs.nvidia.com/deploy/cuda-compatibility/) and install the correct Nvidia drivers and CUDA toolkits. Follow the installation instructions for [pytorch](https://pytorch.org/) and [pytorch3d](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md) accordingly.
+
+### Docker Container
+
+Execute the following commands:
+
+```bash
 docker run --rm -it pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
-- $conda install -c fvcore -c iopath -c conda-forge fvcore iopath
-- $conda install pytorch3d=0.7.0 -c pytorch3d
-- $ipython
-- $from pytorch3d.structures import Meshes
+$conda install -c fvcore -c iopath -c conda-forge fvcore iopath
+$conda install pytorch3d=0.7.0 -c pytorch3d
+$ipython
+$from pytorch3d.structures import Meshes
+```
 
-## Runtime setup
-To Do
+## Demo 
 
-## Create your own dataset
-To Do
+### Running the System
+
+- **Module 1: Behaviour Generation**
+
+  Navigate to `behaviour_predictor/behaviour/online_with_webcam_microphone` and run:
+
+  ```bash
+  python behaviour_predictor.py
+  ```
+- **Module 2: FastAPI Backend**
+
+  Navigate to `IVA/fastApi_backend`, ensure all FastAPI dependencies are installed, and start the server:
+
+  ```bash
+  python fast_api_server.py
+  ```
+  After starting the backend, connect the frontend with Gloria to test the communication. Navigate to `IVA/front-end` and start `index.html`. Ensure your browser and JavaScript dependencies are up-to-date. Click the connect button to establish a connection to the backend once Gloria is visible on your web browser.
+
+- **Module 3: FLAME Webcam Extractor**
+
+  Navigate to `extractors/src/feature_extraction_online` and start:
+
+  ```bash
+  python webcam_flame_extractor.py
+  ```
+  Then, start `microphone_mfcc_extractor.py`:
+
+  ```bash
+  python microphone_mfcc_extractor.py
+  ```
+  These modules stream data to the behavior generator for behavior prediction.
+
+## [Demo Video](https://youtu.be/I54lP-J0mtU)
+
+[![Watch the video](https://img.youtube.com/vi/I54lP-J0mtU/default.jpg)](https://youtu.be/I54lP-J0mtU)
+
+## Data
+
+To access the therapy dataset and pre-trained models, please contact me via email: [daksitha.withanage.don@uni-a-de](mailto:daksitha.withanage.don@uni-a-de) or [daksitha.withanage@gmail.com](mailto:daksitha.withanage@gmail.com)
+
+## Cite Our Paper
+
+If you utilize our work, please cite our paper:
+
+```bibtex
+@inproceedings{10.1145/3577190.3614133,
+  author = {Withanage Don, Daksitha Senel and M"{u}ller, Philipp and Nunnari, Fabrizio and Andr'{e}, Elisabeth and Gebhard, Patrick},
+  title = {ReNeLiB: Real-Time Neural Listening Behavior Generation for Socially Interactive Agents},
+  year = {2023},
+  isbn = {9798400700552},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3577190.3614133},
+  doi = {10.1145/3577190.3614133},
+  pages = {507–516},
+  numpages = {10},
+  location = {Paris, France},
+  series = {ICMI '23}
+}
+```
+
+## Acknowledgements
+
+Special thanks to [Radek Daněček](https://emoca.is.tue.mpg.de/) and [Evone Ng](http://people.eecs.berkeley.edu/~evonne_ng/) for their invaluable tips and code contributions.
+
+For further collaborations or queries, feel free to [contact me](mailto:daksitha.withanage@gmail.com).
