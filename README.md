@@ -55,7 +55,7 @@ $from pytorch3d.structures import Meshes
   Navigate to `behaviour_predictor/behaviour/online_with_webcam_microphone` and run:
 
   ```bash
-  python behaviour_predictor.py
+  python behaviour_predictor_with_VAD.py
   ```
 - **Module 2: FastAPI Backend**
 
@@ -64,21 +64,23 @@ $from pytorch3d.structures import Meshes
   ```bash
   python fast_api_server.py
   ```
-  After starting the backend, connect the frontend with Gloria to test the communication. Navigate to `IVA/front-end` and start `index.html`. Ensure your browser and JavaScript dependencies are up-to-date. Click the connect button to establish a connection to the backend once Gloria is visible on your web browser.
+  After starting the backend, connect the front end with Gloria to test the communication. Navigate to `IVA/front-end` and start `index.html`. Ensure your browser and JavaScript dependencies are up-to-date. Click the connect button to establish a connection to the backend once Gloria is visible on your web browser.
 
 - **Module 3: FLAME Webcam Extractor**
 
   Navigate to `extractors/src/feature_extraction_online` and start:
 
   ```bash
-  python webcam_flame_extractor.py
+  python webcam_flame_extractor_simple_version.py
   ```
-  Then, start `microphone_mfcc_extractor.py`:
+  Then, start mfcc extractor:
 
   ```bash
-  python microphone_mfcc_extractor.py
+  python microphone_mfcc_extractor_with_VAD.py
   ```
   These modules stream data to the behavior generator for behavior prediction.
+
+
 
 ## [Demo Video](https://youtu.be/I54lP-J0mtU)
 
