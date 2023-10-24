@@ -4,11 +4,16 @@
 ![Teaser Image](docs/teaser.png)
 
 ## Quick Links
-
+- [Demo Video](#demo-video)
 - [The Paper](https://doi.org/10.1145/3577190.3614133)
 - [Code on GitHub](https://github.com/Daksitha/ReNeLib)
 - [Data](#data)
-- [Demo Video](#demo-video)
+
+
+
+| Demo Video 1 | Demo Video 2 | Video with Gloria Character from Charamel GmBH |
+|:---:|:---:|:---:|
+| [![Demo Video 1](https://img.youtube.com/vi/I54lP-J0mtU/default.jpg)](https://youtu.be/I54lP-J0mtU) | [![Demo Video 2](https://img.youtube.com/vi/HoYOiSvzDzM/default.jpg)](https://youtu.be/HoYOiSvzDzM) | [![Video with Gloria Character from Charamel GmBH](https://img.youtube.com/vi/dwKoDaCo148/default.jpg)](https://youtu.be/dwKoDaCo148) |
 
 ## Abstract
 
@@ -80,11 +85,6 @@ $from pytorch3d.structures import Meshes
   ```
   These modules stream data to the behavior generator for behavior prediction.
 
-
-
-## [Demo Video](https://youtu.be/I54lP-J0mtU)
-
-[![Watch the video](https://img.youtube.com/vi/I54lP-J0mtU/default.jpg)](https://youtu.be/I54lP-J0mtU)
 
 ## Data
 
