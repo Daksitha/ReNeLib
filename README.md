@@ -11,9 +11,8 @@
 
 
 
-| Demo Video 1 | Demo Video 2 | Video with Gloria Character from Charamel GmBH |
-|:---:|:---:|:---:|
-| [![Demo Video 1](https://img.youtube.com/vi/I54lP-J0mtU/default.jpg)](https://youtu.be/I54lP-J0mtU) | [![Demo Video 2](https://img.youtube.com/vi/HoYOiSvzDzM/default.jpg)](https://youtu.be/HoYOiSvzDzM) | [![Video with Gloria Character from Charamel GmBH](https://img.youtube.com/vi/dwKoDaCo148/default.jpg)](https://youtu.be/dwKoDaCo148) |
+## Demo Video
+[![Demo Video 1](http://img.youtube.com/vi/yEM8RjMW2VI/0.jpg)]((https://youtu.be/yEM8RjMW2VI)) 
 
 ## Abstract
 
