@@ -12,7 +12,7 @@
 
 
 ## Demo Video
-[![Demo Video 1](http://img.youtube.com/vi/yEM8RjMW2VI/0.jpg)]((https://youtu.be/yEM8RjMW2VI)) 
+[![Demo Video 1](http://img.youtube.com/vi/yEM8RjMW2VI/0.jpg)](https://youtu.be/yEM8RjMW2VI) 
 
 ## Abstract
 
